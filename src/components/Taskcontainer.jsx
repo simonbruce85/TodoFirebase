@@ -47,7 +47,7 @@ const Taskcontainer = () => {
           <div className=" flex flex-col p-4 ">
             <textarea
               className="bg-[#393E46] text-[#00ADB5] placeholder:text-[#00ADB5] placeholder:opacity-50 w-full"
-              placeholder="First Name"
+              placeholder="Add a task"
               rows='5'
               value={todoInput}
               onChange={(e) => {
