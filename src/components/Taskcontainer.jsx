@@ -49,10 +49,12 @@ const Taskcontainer = () => {
               className="bg-[#393E46] text-[#00ADB5] placeholder:text-[#00ADB5] placeholder:opacity-50 w-full"
               placeholder="Add a task"
               rows='5'
+              type="submit"
               value={todoInput}
               onChange={(e) => {
                 setTodoInput(e.target.value);
               }}
+              
             ></textarea>
             <div className="flex py-2 justify-end">
               <button
