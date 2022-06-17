@@ -1,4 +1,3 @@
-import { Button, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import "../App.css";
 import { db } from "../firebase_config";
@@ -10,7 +9,7 @@ const Taskcontainer = () => {
   const [todoInput, setTodoInput] = useState("");
 
   useEffect(() => {
-    getTodo();
+   getTodo(); 
   }, []);
 
   const getTodo = () => {
@@ -46,11 +45,12 @@ const Taskcontainer = () => {
         <form className="w-full md:w-[400px] h-[200px] bg-[#393E46] rounded-xl mt-2">
           <div className=" flex flex-col p-4 ">
             <textarea
-              className="bg-[#393E46] text-[#00ADB5] placeholder:text-[#00ADB5] placeholder:opacity-50 w-full"
+              className="bg-[#393E46] text-[#00ADB5] placeholder:text-[#00ADB5] placeholder:opacity-50 w-full resize-none"
               placeholder="Add a task"
               rows='5'
               type="submit"
               value={todoInput}
+
               onChange={(e) => {
                 setTodoInput(e.target.value);
               }}
@@ -58,7 +58,7 @@ const Taskcontainer = () => {
             ></textarea>
             <div className="flex py-2 justify-end">
               <button
-                className="min-w-[60px] items-center px-2 rounded-md py-1 bg-[#00ADB5]"
+                className="min-w-[50px] items-center px-2 rounded-md py-1 bg-[#00ADB5]"
                 type="submit"
                 onClick={addTodo}
               >
@@ -69,7 +69,7 @@ const Taskcontainer = () => {
         </form>
       </div>
       <div className="w-full pt-16 min-h-full">
-        <div className="grid grid-cols-1 md:grid-cols-4 px-4 justify-center items-center gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 px-4 justify-center items-center gap-6">
           {todos.map((todo) => (
             <Todoitem
               todo={todo.todo}
